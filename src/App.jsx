@@ -42,6 +42,8 @@ function App() {
         <Link to="/">Home</Link>
         {" | "}
         <Link to="/users">users</Link>
+        {" | "}
+        <Link to="/zahid">zahid</Link>
       </nav>
 
       {/* <Outlet /> */}
