@@ -9,7 +9,7 @@ import UserDetails from './routes/userDetails.jsx';
 const router = createBrowserRouter([
   {
     path: "/React-Router-Seo/",
-    element: <div>Hello world!</div>,
+    element: <App/>,
   
     // children:[
     //   {
