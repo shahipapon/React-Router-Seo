@@ -1,6 +1,7 @@
 // UserDetails.js
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import DynamicMeta from '../components/DynamicMeta';
 
 const UserDetails = () => {
   // console.log(`📌 ~ UserDetails ~ match:`, match);
@@ -31,6 +32,11 @@ const UserDetails = () => {
 
   return (
     <div>
+       <DynamicMeta
+        title="new title "
+        description="hello hello hello "
+        canonicalUrl="https://shahipapon.github.io/React-Router-Seo"
+      />
       {/* <div className="user-card"> */}
       <img src={user.picture.large} alt={`Avatar of ${user.name.first} ${user.name.last}`} />
      

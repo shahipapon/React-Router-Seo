@@ -1,14 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 import { Link, Outlet } from "react-router-dom";
+import DynamicMeta from "./components/DynamicMeta";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
+      <DynamicMeta
+        title="How to Create Dynamic Meta Tags"
+        description="Learn how to create dynamic meta tags in a React.js application for improved SEO."
+        canonicalUrl="https://shahipapon.github.io/React-Router-Seo"
+      />
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -38,7 +46,7 @@ function App() {
 
       {/* <Outlet /> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
