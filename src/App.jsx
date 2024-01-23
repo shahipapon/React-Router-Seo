@@ -39,9 +39,9 @@ function App() {
       </p>
 
       <nav>
-        <Link to="/React-Router-Seo/">Home</Link>
+        <Link to="/">Home</Link>
         {" | "}
-        <Link to="/React-Router-Seo/users">users</Link>
+        <Link to="/users">users</Link>
       </nav>
 
       {/* <Outlet /> */}
