@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from './error-page.jsx';
 import UserDetails from './pages/userDetails.jsx';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import Zahid from './pages/Zahid.jsx';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: "/user/:userId",
     element: <UserDetails />,
+  },
+  {
+    path: "/zahid",
+    element: <Zahid />,
   },
 
 ]);
