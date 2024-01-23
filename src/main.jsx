@@ -10,27 +10,27 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const router = createBrowserRouter([
   {
-    path: "/React-Router-Seo/",
+    path: "/",
     element: <App/>,
   
   //   children:[
   //     {
-  //   path: "/React-Router-Seo/users",
+  //   path: "/users",
   //   element: <Users/>,
   // },
   // {
-  //   path: "/React-Router-Seo/user/:userId",
+  //   path: "/user/:userId",
   //   element: <UserDetails />,
   // },
   //   ],
     errorElement: <ErrorPage />,
   },
   {
-    path: "/React-Router-Seo/users",
+    path: "/users",
     element: <Users/>,
   },
   {
-    path: "/React-Router-Seo/user/:userId",
+    path: "/user/:userId",
     element: <UserDetails />,
   },
 
