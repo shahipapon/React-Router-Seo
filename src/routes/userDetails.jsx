@@ -38,7 +38,7 @@ const UserDetails = () => {
       <h2>{`${user.name.first} ${user.name.last}`}</h2>
       <p>Email: {user.email}</p>
       <p>Location: {user.location.city}, {user.location.country}</p>
-      <Link to="/users">
+      <Link to="/React-Router-Seo/users">
         <button>Back to Users</button>
       </Link>
     </div>

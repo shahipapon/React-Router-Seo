@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Children } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import Users from "./routes/users.jsx";
@@ -8,18 +8,30 @@ import ErrorPage from './error-page.jsx';
 import UserDetails from './routes/userDetails.jsx';
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/React-Router-Seo/",
     element: <div>Hello world!</div>,
+  
+    // children:[
+    //   {
+    //     path: "/React-Router-Seo/users",
+    //     element: <Users/>,
+    //   },
+    //   {
+    //     path: "React-Router-Seo/user/:userId",
+    //     element: <UserDetails />,
+    //   },
+    // ],
     errorElement: <ErrorPage />,
   },
   {
-    path: "/users",
+    path: "/React-Router-Seo/users",
     element: <Users/>,
   },
   {
-    path: "user/:userId",
+    path: "/React-Router-Seo/user/:userId",
     element: <UserDetails />,
   },
+
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

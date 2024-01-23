@@ -10,7 +10,7 @@ const UserCard = ({ user }) => {
         <h2>{`${user.name.first} ${user.name.last}`}</h2>
         <p>Email: {user.email}</p>
         <p>Location: {user.location.city}, {user.location.country}</p>
-        <Link to={`/user/${user.login.uuid}`}>
+        <Link to={`/React-Router-Seo/user/${user.login.uuid}`}>
           <button>View Details</button>
         </Link>
       </div>
