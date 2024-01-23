@@ -36,7 +36,7 @@ function App() {
         <Link to="/React-Router-Seo/users">users</Link>
       </nav>
 
-      <Outlet />
+      {/* <Outlet /> */}
     </>
   )
 }
