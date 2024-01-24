@@ -4,48 +4,51 @@ import App from "./App.jsx";
 import Users from "./pages/users.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ErrorPage from './error-page.jsx';
-import UserDetails from './pages/userDetails.jsx';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
-import Zahid from './pages/Zahid.jsx';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App/>,
-  
-  //   children:[
-  //     {
-  //   path: "/users",
-  //   element: <Users/>,
-  // },
-  // {
-  //   path: "/user/:userId",
-  //   element: <UserDetails />,
-  // },
-  //   ],
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/users",
-    element: <Users/>,
-  },
-  {
-    path: "/user/:userId",
-    element: <UserDetails />,
-  },
-  {
-    path: "/zahid",
-    element: <Zahid />,
-  },
+import ErrorPage from "./error-page.jsx";
+import UserDetails from "./pages/userDetails.jsx";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
-]);
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <App/>,
+
+//   //   children:[
+//   //     {
+// path: "/users",
+// element: <Users/>,
+//   // },
+//   // {
+//   //   path: "/user/:userId",
+//   //   element: <UserDetails />,
+//   // },
+//   //   ],
+//     errorElement: <ErrorPage />,
+//   },
+//   {
+//     path: "/users",
+//     element: <Users/>,
+//   },
+//   {
+// path: "/user/:userId",
+// element: <UserDetails />,
+//   },
+
+// ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-     <HelmetProvider>
-    <RouterProvider router={router} />
-
-     </HelmetProvider>
+    <HelmetProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/user/:userId" element={<UserDetails />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      </Router>
+    </HelmetProvider>
   </React.StrictMode>
 );
