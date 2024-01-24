@@ -9,6 +9,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ErrorPage from "./error-page.jsx";
 import UserDetails from "./pages/userDetails.jsx";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import { renderToString } from "react-dom/server";
+import { hydrateRoot } from "react-dom/client";
 
 const router = createBrowserRouter([
   {
@@ -37,7 +39,18 @@ const router = createBrowserRouter([
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+// ReactDOM.createRoot(document.getElementById("root")).render(
+//   <HelmetProvider>
+//     <React.StrictMode>
+//       <RouterProvider router={router} />
+//     </React.StrictMode>
+//   </HelmetProvider>
+// );
+
+// import App from './App.js';
+
+hydrateRoot(
+  document.getElementById("root"),
   <HelmetProvider>
     <React.StrictMode>
       <RouterProvider router={router} />
