@@ -39,21 +39,21 @@ const router = createBrowserRouter([
   },
 ]);
 
-// ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <HelmetProvider>
+      <RouterProvider router={router} />
+    </HelmetProvider>
+  </React.StrictMode>
+);
+
+// import App from './App.js';
+
+// hydrateRoot(
+//   document.getElementById("root"),
 //   <HelmetProvider>
 //     <React.StrictMode>
 //       <RouterProvider router={router} />
 //     </React.StrictMode>
 //   </HelmetProvider>
 // );
-
-// import App from './App.js';
-
-hydrateRoot(
-  document.getElementById("root"),
-  <HelmetProvider>
-    <React.StrictMode>
-      <RouterProvider router={router} />
-    </React.StrictMode>
-  </HelmetProvider>
-);
