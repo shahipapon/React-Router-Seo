@@ -10,45 +10,37 @@ import ErrorPage from "./error-page.jsx";
 import UserDetails from "./pages/userDetails.jsx";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
-// const router = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <App/>,
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
 
-//   //   children:[
-//   //     {
-// path: "/users",
-// element: <Users/>,
-//   // },
-//   // {
-//   //   path: "/user/:userId",
-//   //   element: <UserDetails />,
-//   // },
-//   //   ],
-//     errorElement: <ErrorPage />,
-//   },
-//   {
-//     path: "/users",
-//     element: <Users/>,
-//   },
-//   {
-// path: "/user/:userId",
-// element: <UserDetails />,
-//   },
-
-// ]);
+    //   children:[
+    //     {
+    // path: "/users",
+    // element: <Users/>,
+    // },
+    // {
+    //   path: "/user/:userId",
+    //   element: <UserDetails />,
+    // },
+    //   ],
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/users",
+    element: <Users />,
+  },
+  {
+    path: "/user/:userId",
+    element: <UserDetails />,
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <HelmetProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="/users" element={<Users />} />
-          <Route path="/user/:userId" element={<UserDetails />} />
-          <Route path="*" element={<ErrorPage />} />
-        </Routes>
-      </Router>
+      <RouterProvider router={router} />
     </HelmetProvider>
   </React.StrictMode>
 );
