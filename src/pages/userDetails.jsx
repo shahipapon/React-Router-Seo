@@ -27,7 +27,14 @@ const UserDetails = () => {
   }, [userId]);
 
   if (!user) {
-    return <div>Loading...</div>;
+    return <div><DynamicMeta
+    title="new title "
+    description="hello hello hello no user "
+    canonicalUrl="https://shahipapon.github.io/React-Router-Seo"
+  />
+  Loading...
+  
+  </div>;
   }
 
   return (
